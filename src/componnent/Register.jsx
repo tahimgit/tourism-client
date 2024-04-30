@@ -33,7 +33,7 @@ const {createUser,udpateUser, user} = useContext(AuthContext)
       registerdUser.updateProfile({
         displayName: name
       }).then(function() {
-        // Update successful.
+        // Update Complete.
         console.log("Display name updated successfully");
       }).catch(function(error) {
         // An error occurred.
@@ -61,6 +61,7 @@ const {createUser,udpateUser, user} = useContext(AuthContext)
       // console.log(result.user);
       const res = await udpateUser(name,photo,email)
       // console.log(user)
+      
       // console.log(res)
       const Toast = Swal.mixin({
         toast: true,
