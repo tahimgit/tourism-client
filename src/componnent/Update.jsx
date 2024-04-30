@@ -11,7 +11,6 @@ const Update = () => {
     const {user, loadding} = useContext(AuthContext)
 
     const updateSpot = useLoaderData();
-    console.log(updateSpot);  
 
 
     const {_id, userEmail,userName, short_description, image, tourists_spot_name, country_Name, location, average_cost, seasonality, travel_time,totaVisitorsPerYear} = updateSpot;
@@ -33,7 +32,6 @@ const Update = () => {
         // const email = user.email;
         const updateDate = {userEmail, image: photo, tourists_spot_name: spotName, country_Name: countryName, location, average_cost: cost, seasonality, travel_time: time, totaVisitorsPerYear: perYear, userName, short_description:description};
 
-        console.log(updateDate);
 
 
         
