@@ -7,7 +7,7 @@ const names = {
     Indonesia: "https://img.freepik.com/free-photo/temple-gates-lempuyang-luhur-temple-bali-indonesia_335224-367.jpg",
     Malaysia: "https://t4.ftcdn.net/jpg/01/00/21/83/360_F_100218316_WbRzPWf4xNTI2xUfljBxKv7R3RILjVq6.jpg",
     Vietnam: "https://static.independent.co.uk/2022/10/27/16/iStock-180697190.jpg",
-    Cambodia: "https://thumbs.dreamstime.com/b/panorama-view-angkor-wat-temple-siem-reap-cambodia-ancient-khmer-architecture-sunset-40397542.jpg"
+    Combodia: "https://thumbs.dreamstime.com/b/panorama-view-angkor-wat-temple-siem-reap-cambodia-ancient-khmer-architecture-sunset-40397542.jpg"
 }
 const CountryList = ({counList}) => {
     const {name} = counList
