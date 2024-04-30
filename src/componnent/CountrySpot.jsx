@@ -11,10 +11,9 @@ const CountrySpot = () => {
         fetch(`https://tourism-tourisspots.vercel.app/countries-spot/${name}`)
         .then(res=>res.json())
         .then(data => {
-            console.log(data);
             
             setCountryList(data)
-        //    return setLoadding(false)
+        //    return setLoading(false)
            
         })
     },[]);
