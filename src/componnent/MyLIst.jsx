@@ -23,7 +23,7 @@ const MyLIst = () => {
             console.log(data);
             
             setList(data)
-           return setLoadding(false)
+           return setLoading(false)
            
         })
     },[user]);

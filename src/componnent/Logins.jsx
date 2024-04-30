@@ -19,7 +19,7 @@ const Logins = () => {
     const {singIn, signInWithGoogle, handleGithubeSign, loadding} = useContext(AuthContext);
 
 
-    if(loadding){
+    if(loading){
         return (
             <div className='flex justify-center mt-80 min-h-screen'>
             <Box sx={{ display: 'flex' }}>

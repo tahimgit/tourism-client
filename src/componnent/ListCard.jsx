@@ -11,7 +11,7 @@ const ListCard = ({list}) => {
     
     const handleDelete = _id =>{
 
-      console.log(_id);
+      
 
       Swal.fire({
         title: "Are you sure?",
@@ -28,7 +28,7 @@ const ListCard = ({list}) => {
           })
           .then(res=>res.json())
           .then(data =>{
-            console.log(data);
+            
             if(data.deletedCount > 0){
               Swal.fire({
             title: "Deleted!",
