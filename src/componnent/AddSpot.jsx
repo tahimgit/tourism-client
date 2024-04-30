@@ -10,7 +10,6 @@ const AddSpot = () => {
 
     const {user, loadding} = useContext(AuthContext)
 
-
     if(loadding){
         return (
             <div className='flex justify-center items-center'>
@@ -20,8 +19,6 @@ const AddSpot = () => {
             </div>
           );
     }
-
-
 
     const handleAdd = e =>{
         e.preventDefault();
@@ -40,8 +37,6 @@ const AddSpot = () => {
         const userName = user.displayName;
         const userEmail = user.email;
         const newData = {userEmail, image, tourists_spot_name, country_Name, location, average_cost, seasonality, travel_time, totaVisitorsPerYear, userEmail, userName, short_description};
-
-        console.log(newData);
 
 
         fetch('https://tourism-tourisspots.vercel.app/addTouristSpot',{
