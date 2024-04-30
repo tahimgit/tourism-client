@@ -11,12 +11,12 @@ const Footer = () => {
           <div className=" lg:mx-auto  justify-between mb-20">
           <div className="grid grid-cols-2 gap-2 lg:flex justify-between lg:w-[1280px]">
           <div>
-          <h1 className="text-4xl font-bold">TOUR OF <br /> <span className="text-orange-400">SOUTH ASIA</span></h1>
+          <h1 className="text-4xl font-bold">EXPLORER OF <br /> <span className="text-orange-400">SOUTH ASIA</span></h1>
           </div>
 
           <div>
             <h1 className="font-bold text-xl">Address</h1>
-            <p className="flex gap-2 items-center"><FaLocationDot /> 5508 Satkhira, Kulna, Bangladesh</p>
+            <p className="flex gap-2 items-center"><FaLocationDot /> 20/A,Kolabagan,Dhaka-1205, Bangladesh</p>
           </div>
 
           <div>
@@ -42,8 +42,8 @@ const Footer = () => {
           <div className="w-96 lg:w-[1280px] mx-auto col-span-">
           <div className="text-center lg:text-left flex flex-col">
             <h1 className="font-bold text-xl">Contact</h1>
-            <p className="flex gap-2 items-center"><FaPhoneAlt /> 01908-945145</p>
-            <p className="flex gap-2 items-center"><MdEmail /> freelancersayed45@gmail.com</p>
+            <p className="flex gap-2 items-center"><FaPhoneAlt /> 02-99955858</p>
+            <p className="flex gap-2 items-center"><MdEmail /> service@expsouthasia.com</p>
             <div className="flex gap-4 mt-2  w-full justify-center lg:justify-start">
               <a href="facebook.com"><FaFacebook className="text-2xl" /></a>
               <a href="facbook.com"><FaXTwitter className="text-2xl" /></a>

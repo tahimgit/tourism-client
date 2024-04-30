@@ -59,4 +59,4 @@ const TourisFeedback = () => {
     );
 };
 
-export default TouristFeedback;<h1 className='text-4xl'>Tourist Feedback</h1>
+export default TourisFeedback;

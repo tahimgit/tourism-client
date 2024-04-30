@@ -36,7 +36,7 @@ const AddSpot = () => {
         const short_description = form.descreption.value;
         const userName = user.displayName;
         const userEmail = user.email;
-        const newData = {userEmail, image, tourists_spot_name, country_Name, location, average_cost, seasonality, travel_time, totaVisitorsPerYear, userEmail, userName, short_description};
+        const newData = { image, tourists_spot_name, country_Name, location, average_cost, seasonality, travel_time, totaVisitorsPerYear, userEmail, userName, short_description};
 
 
         fetch('https://tourism-tourisspots.vercel.app/addTouristSpot',{
