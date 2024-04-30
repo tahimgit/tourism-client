@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBkHuKYZW5nYfBQvBiz_bpHjY9GzG4eIk4",
-  authDomain: "real-estate-b586e.firebaseapp.com",
-  projectId: "real-estate-b586e",
-  storageBucket: "real-estate-b586e.appspot.com",
-  messagingSenderId: "1089173232040",
-  appId: "1:1089173232040:web:6d34f6fed605eeb4e8259d"
+  apiKey: "AIzaSyBqaMTkBsMzSM5TcgQKIEX8kEHXfid-Egk",
+  authDomain: "explorer-tourism.firebaseapp.com",
+  projectId: "explorer-tourism",
+  storageBucket: "explorer-tourism.appspot.com",
+  messagingSenderId: "10168366462",
+  appId: "1:10168366462:web:f4134d279b42a675466f2f"
 };
 
 // Initialize Firebase
