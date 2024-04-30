@@ -33,19 +33,19 @@ const TestimonialSection = () => {
       name: 'John Doe',
       avatar: 'https://media.istockphoto.com/id/1476170969/photo/portrait-of-young-man-ready-for-job-business-concept.jpg?s=1024x1024&w=is&k=20&c=8mgK2Kq73o8DIjazvLmEGkhx2p_7P5r3mvpbIM6q5cA=',
       rating: 5,
-      comment: 'Amazing product! It exceeded my expectations. I highly recommend it to everyone.',
+      comment: 'Amazing product! Impressive ! It extreme my expectations. I highly recommend it to everyone.',
     },
     {
       name: 'Jane Smith',
       avatar: 'https://media.istockphoto.com/id/866474934/photo/young-handsome-businessman-wearing-white-shirt-against-white-background.jpg?s=1024x1024&w=is&k=20&c=2Nolr_yYTuJdYB2cXPMMH4zIv6H46Wgt9lJs7u-nHek=',
       rating: 4,
-      comment: 'Great service and excellent customer support. Will definitely use again!',
+      comment: 'Great service and excellent customer support. Will definitely use it again!',
     },
     {
       name: 'Michael Johnson',
       avatar: 'https://media.istockphoto.com/id/486320806/photo/man-laugh-closeup.jpg?s=1024x1024&w=is&k=20&c=9ELdgN-k3bQCM7D6cBbErdHM14ws1DP-FNUZcstNGKo=',
       rating: 5,
-      comment: 'I love how easy it is to use. It saved me a lot of time and effort. Thank you!',
+      comment: 'I love how easy it is to use. It saved my a lot of time and effort. Thank you!',
     },
   ];
 
