@@ -9,8 +9,6 @@ import CountryList from "./CountryList";
 import AutoCarousel from "./Caurosel";
 
 
-
-
 const Home = () => {
    
     const spotdata = useLoaderData();
@@ -24,7 +22,7 @@ const Home = () => {
             console.log(data);
             
             setCountryList(data)
-        //    return setLoadding(false)
+        //    return setLoading(false)
            
         })
     },[]);
@@ -53,7 +51,7 @@ const Home = () => {
         // },[])  
         // console.log(spot);
  
-    console.log(con);
+    
     return (
         <div className='overflow-x-hidden	'>
         <div>
