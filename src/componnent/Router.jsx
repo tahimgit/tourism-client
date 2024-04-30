@@ -16,6 +16,7 @@ import AddSpot from "./AddSpot";
 import SpotDetails from "./SpotDetails";
 import Update from "./Update";
 import Category from "./Category";
+import CountrySpot from "./CountrySpot";
 
 
   const Router = createBrowserRouter([
@@ -27,7 +28,7 @@ import Category from "./Category";
         {
             path: '/',
             element: <Home></Home>,
-            loader: ()=> fetch('http://localhost:5000/addspot')
+            loader: ()=> fetch('https://tourism-tourisspots.vercel.app/latestPosts')
         },
         {
             path: '/login',
@@ -40,7 +41,11 @@ import Category from "./Category";
         {
           path: '/spot',
           element: <AllTouristSpot></AllTouristSpot>,
-          loader: ()=> fetch('http://localhost:5000/addspot')
+          loader: ()=> fetch('https://tourism-tourisspots.vercel.app/touristspots')
+        },
+        {
+          path: '/country-spot/:name',
+          element: <CountrySpot></CountrySpot>
         },
         {
           path: '/myList/',
@@ -61,17 +66,17 @@ import Category from "./Category";
         {
           path: '/details/:_id',
           element: <PrivetRout><SpotDetails></SpotDetails></PrivetRout>,
-          loader: ()=> fetch('http://localhost:5000/addspot')
+          loader: ()=> fetch('https://tourism-tourisspots.vercel.app/touristspots')
         },
         {
           path: '/update/:id',
           element: <PrivetRout><Update></Update></PrivetRout>,
-          loader: ({params}) => fetch(`http://localhost:5000/addspot/${params.id}`)
+          loader: ({params}) => fetch(`https://tourism-tourisspots.vercel.app/touristspots-details/${params.id}`)
         },
-        {
-          path: '/category',
-          element: <Category></Category>
-        }
+        // {
+        //   path: '/category',
+        //   element: <Category></Category>
+        // }
      
       ]
     },

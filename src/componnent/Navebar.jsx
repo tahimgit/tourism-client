@@ -63,9 +63,9 @@ const Navebar = () => {
           <li>
             <NavLink to="/feedback">Touris Feedback</NavLink>
           </li>
-          <li>
+          {/* <li>
             <NavLink to="/category">Category</NavLink>
-          </li>
+          </li> */}
     
         
         </>
@@ -84,7 +84,7 @@ const Navebar = () => {
         {NavLinks}
       </ul>
     </div>
-    <a className="btn btn-ghost text-2xl font-bold">TOUR OF SOUTH ASIA </a>
+    <a className="btn btn-ghost text-2xl font-bold">EXPLORER OF SOUTH ASIA</a>
   </div>
   <div className="navbar-center  hidden lg:flex">
     <ul className="gap-8 menu-horizontal px-1">

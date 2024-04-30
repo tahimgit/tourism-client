@@ -11,22 +11,10 @@ const Update = () => {
     const {user, loadding} = useContext(AuthContext)
 
     const updateSpot = useLoaderData();
-console.log(updateSpot);  
-
-    const {_id, userEmail, photo, spotName, countryName, location, cost, seasonality, time, perYear, email, userName, description}= updateSpot;
+    console.log(updateSpot);  
 
 
-
-    // if(loadding){
-    //     return (
-    //         <div className='flex justify-center items-center'>
-    //             <Box sx={{ display: 'flex' }}>
-    //           <CircularProgress />
-    //         </Box>
-    //         </div>
-    //       );
-    // }
-
+    const {_id, userEmail,userName, short_description, image, tourists_spot_name, country_Name, location, average_cost, seasonality, travel_time,totaVisitorsPerYear} = updateSpot;
 
 
     const handleUpdate = e =>{
@@ -40,17 +28,16 @@ console.log(updateSpot);
         const seasonality = form.seasonality.value;
         const time = form.time.value;
         const perYear = form.perYear.value;
-        const userEmail = form.email.value;
-        const userName = form.userName.value;
+
         const description = form.descreption.value;
         // const email = user.email;
-        const updateDate = {userEmail, photo, spotName, countryName, location, cost, seasonality, time, perYear, email, userName, description};
+        const updateDate = {userEmail, image: photo, tourists_spot_name: spotName, country_Name: countryName, location, average_cost: cost, seasonality, travel_time: time, totaVisitorsPerYear: perYear, userName, short_description:description};
 
         console.log(updateDate);
 
 
         
-        fetch(`http://localhost:5000/addspot/${_id}`,{
+        fetch(`https://tourism-tourisspots.vercel.app/touristspots/${_id}`,{
             method: 'PUT',
             headers:
                 {
@@ -77,30 +64,28 @@ console.log(updateSpot);
     return (
     <div className='bg-black'>
         
-<div className='max-w-[1280px] mx-auto content-center min-h-scree' >
-<form onSubmit={handleUpdate} className='lg:w-4/5 mx-auto bg-black shadow-sm shadow-gray-700 px-6  py-10 mb-10' action="">
+    <div className='max-w-[1280px] mx-auto content-center min-h-scree' >
+    <form onSubmit={handleUpdate} className='lg:w-4/5 mx-auto bg-black shadow-sm shadow-gray-700 px-6  py-10 mb-10' action="">
 
-<h1 className='text-5xl text-center text-white font-bold mb-4'>Update Your Tourists Spot</h1>
-<h1 className='text-2xl'>{email}</h1>
-<hr className=' border-gray-500 border-2' />
+        <h1 className='text-5xl text-center text-white font-bold mb-4'>Update Your Tourists Spot</h1>
+        <h1 className='text-2xl'>{userEmail}</h1>
+        <hr className=' border-gray-500 border-2' />
 
-<div className='justify-center grid grid-cols-2 gap-4 mt-32'>
-<input className='w-full outline-none py-2 px-2 border-b border-gray-600 bg-black text-[#FFC700]'   type="url"   defaultValue={photo}       name="url"          placeholder='Photo URL' id="" />
-<input className='w-full outline-none py-2 px-2 border-b border-gray-600 bg-black text-[#FFC700]'   type="text"  defaultValue={spotName}     name="spotName"    placeholder='Spot Name' id="" />
-<input className='w-full outline-none py-2 px-2 border-b border-gray-600 bg-black text-[#FFC700]'   type="text"  defaultValue={countryName} name="countryName"  placeholder='Country Name' id="" />
-<input className='w-full outline-none py-2 px-2 border-b border-gray-600 bg-black text-[#FFC700]'   type="text"  defaultValue={location}    name="location"     placeholder='Location' id="" />
-<input className='w-full outline-none py-2 px-2 border-b border-gray-600 bg-black text-[#FFC700]'   type="text"  defaultValue={cost}        name="cost"         placeholder='Average Cost' id="" />
-<input className='w-full outline-none py-2 px-2 border-b border-gray-600 bg-black text-[#FFC700]'   type="text"  defaultValue={seasonality} name="seasonality"  placeholder='Seasonality' id="" />
-<input className='w-full outline-none py-2 px-2 border-b border-gray-600 bg-black text-[#FFC700]'   type="text"  defaultValue={time}        name="time"         placeholder='Trabel Time' id="" />
-<input className='w-full outline-none py-2 px-2 border-b border-gray-600 bg-black text-[#FFC700]'   type="text"  defaultValue={perYear}     name="perYear"      placeholder='Total Visitors Per Year' id="" />
-<input className='w-full outline-none py-2 px-2 border-b border-gray-600 bg-black text-[#FFC700]'   type="email" defaultValue={userEmail}   name="email"        placeholder='Email' id="" />
-<input className='w-full outline-none py-2 px-2 border-b border-gray-600 bg-black text-[#FFC700]'   type="text"  defaultValue={userName}    name="userName"     placeholder='User Name' id="" />
-<input className='w-full outline-none py-2 px-2 border-b border-gray-600 bg-black text-[#FFC700] col-span-2' type="text"   defaultValue={description}  name="descreption" placeholder='Short Description' id="" />
-<input className='w-full py-1 rounded px-2 cursor-pointer bg-[#f8731a] text-white font-bold col-span-2 mt-8'  type="submit" name="submit" value="Add Spot" placeholder='' id="" />
-</div>
+        <div className='justify-center grid grid-cols-2 gap-4 mt-32'>
+            <input className='w-full outline-none py-2 px-2 border-b border-gray-600 bg-black text-[#FFC700]'   type="url"   defaultValue={image}       name="url"          placeholder='Photo URL' id="" />
+            <input className='w-full outline-none py-2 px-2 border-b border-gray-600 bg-black text-[#FFC700]'   type="text"  defaultValue={tourists_spot_name}     name="spotName"    placeholder='Spot Name' id="" />
+            <input className='w-full outline-none py-2 px-2 border-b border-gray-600 bg-black text-[#FFC700]'   type="text"  defaultValue={country_Name} name="countryName"  placeholder='Country Name' id="" />
+            <input className='w-full outline-none py-2 px-2 border-b border-gray-600 bg-black text-[#FFC700]'   type="text"  defaultValue={location}    name="location"     placeholder='Location' id="" />
+            <input className='w-full outline-none py-2 px-2 border-b border-gray-600 bg-black text-[#FFC700]'   type="text"  defaultValue={average_cost}        name="cost"         placeholder='Average Cost' id="" />
+            <input className='w-full outline-none py-2 px-2 border-b border-gray-600 bg-black text-[#FFC700]'   type="text"  defaultValue={seasonality} name="seasonality"  placeholder='Seasonality' id="" />
+            <input className='w-full outline-none py-2 px-2 border-b border-gray-600 bg-black text-[#FFC700]'   type="text"  defaultValue={travel_time}        name="time"         placeholder='Trabel Time' id="" />
+            <input className='w-full outline-none py-2 px-2 border-b border-gray-600 bg-black text-[#FFC700]'   type="text"  defaultValue={totaVisitorsPerYear}     name="perYear"      placeholder='Total Visitors Per Year' id="" />
+            <input className='w-full outline-none py-2 px-2 border-b border-gray-600 bg-black text-[#FFC700] col-span-2' type="text"   defaultValue={short_description}  name="descreption" placeholder='Short Description' id="" />
+            <input className='w-full py-1 rounded px-2 cursor-pointer bg-[#f8731a] text-white font-bold col-span-2 mt-8'  type="submit" name="submit" value="Add Spot" placeholder='' id="" />
+        </div>
               
-</form>
-</div>
+        </form>
+        </div>
 
 
         </div>

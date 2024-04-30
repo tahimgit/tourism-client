@@ -1,4 +1,4 @@
-import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
+import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword,updateProfile, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import app from "../firebase/firebase.config";
 
@@ -13,12 +13,27 @@ const Authprovider = ({children}) => {
     const [user, setUser] = useState(null);
     const [loadding, setLoadding] = useState(true)
 
-    const createUser = (email, password, photo, name)=>{
+    const createUser = (email, password, photoURL, displayName)=>{
         setLoadding(true);
-        return createUserWithEmailAndPassword(auth, email,  password, photo, name)
+        return createUserWithEmailAndPassword(auth, email,  password, photoURL, displayName)
     };
 
-    
+    const udpateUser = (displayName, photoURL,email) => {
+        updateProfile(auth.currentUser, {
+            displayName: displayName, photoURL: photoURL
+          }).then((profile) => {
+            setUser({displayName: displayName,email: email})
+            return profile
+          }).catch((error) => {
+            // An error occurred
+            // ...
+            return error
+          });
+    }
+    const getUser = () => {
+        const users = auth.currentUser;
+        setUser(users)
+    }
     const singIn = (email, password)=>{
         setLoadding(true)
         return signInWithEmailAndPassword(auth, email, password);
@@ -56,6 +71,7 @@ const Authprovider = ({children}) => {
     const userInfo ={
         user,
         loadding,
+        udpateUser,
         createUser,
         singIn,
         signInWithGoogle,

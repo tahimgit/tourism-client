@@ -7,7 +7,7 @@ import { update } from 'firebase/database';
 import Swal from 'sweetalert2';
 
 const ListCard = ({list}) => {
-    const {_id, userEmail, photo, spotName, countryName, location, cost, seasonality, time, perYear, email, userName, description} = list;
+    const {_id, userEmail, image, tourists_spot_name, country_Name, location, average_cost, seasonality, travel_time, totaVisitorsPerYear, userName, short_description} = list;
     
     const handleDelete = _id =>{
 
@@ -23,7 +23,7 @@ const ListCard = ({list}) => {
         confirmButtonText: "Yes, delete it!"
       }).then((result) => {
         if (result.isConfirmed) {
-          fetch(`http://localhost:5000/addspot/${_id}`,{
+          fetch(`https://tourism-tourisspots.vercel.app/touristspots/${_id}`,{
             method: 'DELETE'
           })
           .then(res=>res.json())
@@ -43,72 +43,70 @@ const ListCard = ({list}) => {
     
     
     return (
-        <div className='max-w-[1280px] mx-auto '>
-        <div className=' bg-black mt-5  gap-2   flex  shadow-2xl shadow-gray-800 listcard'>
-      <div className='flex  w-[635px] border-r border-orange-400  h-[410px] '><img className=' w-full' src={photo} alt="" /></div>
+        <div className='max-w-[1280px] mx-auto bg[#000000ad] shadow-2xl shadow-gray-800 listcard'>
+          <div className='  mt-5  gap-2   flex  '>
+            <div className='flex  w-[635px] border-r border-orange-400  h-[410px] '><img className=' w-full' src={image} alt="" /></div>
 
 
-<table className="table flex-1 h-[300px] flex ">
- {/* head */}
- <thead>
-   <tr className='text- text-orange-400 font-bold'>
-     <th>SPOT NAME</th>
-     <th> {spotName}</th>
-   </tr>
- </thead>
- <tbody>
-   {/* row 1 */}
-   <tr>
-     <td>COUNTRY NAME</td>
-     <td> {countryName}</td>
-   </tr>
-   {/* row 2 */}
-   <tr>
-     <td>LOCATION</td>
-     <td> {location}</td>
-   </tr>
-   {/* row 3 */}
-   <tr>
-     <td>SEASONALITY</td>
-     <td>{seasonality}</td>
-   </tr>
- </tbody>
- <tbody>
- <tr>
-     <td>COST</td>
-     <td>{cost}</td>
-   </tr>
-   <tr>
-     <td>DATE</td>
-     <td>{time}</td>
-   </tr>
-   <tr>
-     <td>PER YEAR</td>
-     <td>{perYear}</td>
-   </tr>
-   <tr>
-     <td>DESCRIPTION</td>
-     <td>{description}</td>
-   </tr>
-   <tr>
-     <td>CREATED BY</td>
-     <td>{userName}</td>
-   </tr>
- </tbody>
-</table>
+                  <table className="table flex-1 h-[300px] flex ">
+                  {/* head */}
+                  <thead>
+                    <tr className='text- text-orange-400 font-bold'>
+                      <th>SPOT NAME</th>
+                      <th> {tourists_spot_name}</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {/* row 1 */}
+                    <tr>
+                      <td>COUNTRY NAME</td>
+                      <td> {country_Name}</td>
+                    </tr>
+                    {/* row 2 */}
+                    <tr>
+                      <td>LOCATION</td>
+                      <td> {location}</td>
+                    </tr>
+                    {/* row 3 */}
+                    <tr>
+                      <td>SEASONALITY</td>
+                      <td>{seasonality}</td>
+                    </tr>
+                  </tbody>
+                  <tbody>
+                  <tr>
+                      <td>COST</td>
+                      <td>{average_cost}</td>
+                    </tr>
+                    <tr>
+                      <td>DATE</td>
+                      <td>{travel_time}</td>
+                    </tr>
+                    <tr>
+                      <td>PER YEAR</td>
+                      <td>{totaVisitorsPerYear}</td>
+                    </tr>
+                    <tr>
+                      <td>DESCRIPTION</td>
+                      <td>{short_description}</td>
+                    </tr>
+                    <tr>
+                      <td>CREATED BY</td>
+                      <td>{userName}</td>
+                    </tr>
+                  </tbody>
+                  </table>
 
-<div className=' p-2  delete bg-black'>
-  <div className=''>
-  <Link to={`/update/${_id}`} className='text-2xl'><FaEdit /></Link>
-  <Link onClick={()=> handleDelete(_id)} className='text-2xl   mt-32'><MdDeleteForever className=' ' /></Link>
+               
+          </div>
+          <div className=' p-2  delete bg[#000000ad] '>
+                  <div className='flex justify-center items-center	'>
+                  <Link to={`/update/${_id}`} className='text-4xl text-orange-400	'><FaEdit /></Link>
+                  <Link onClick={()=> handleDelete(_id)} className='text-4xl px-4 text-rose-500	' ><MdDeleteForever className=' ' /></Link>
 
-  </div>
-
-
-</div>
-</div>
-      
-</div>
+                  </div>
+              </div>
+      </div>
     );
 };
 

@@ -25,25 +25,26 @@ const AddSpot = () => {
 
     const handleAdd = e =>{
         e.preventDefault();
+
         const form = e.target;
-        const photo = form.url.value;
-        const spotName = form.spotName.value;
-        const countryName = form.countryName.value;
+        const image = form.url.value;
+        const tourists_spot_name = form.spotName.value;
+        const country_Name = form.countryName.value;
         const location = form.location.value;
-        const cost = form.cost.value;
+        const average_cost = form.cost.value;
         const seasonality = form.seasonality.value;
-        const time = form.time.value;
-        const perYear = form.perYear.value;
-        const userEmail = form.email.value;
-        const userName = form.userName.value;
-        const description = form.descreption.value;
-        const email = user.email;
-        const newData = {userEmail, photo, spotName, countryName, location, cost, seasonality, time, perYear, email, userName, description};
+        const travel_time = form.time.value;
+        const totaVisitorsPerYear = form.perYear.value;
+        // const userEmail = form.email.value;
+        const short_description = form.descreption.value;
+        const userName = user.displayName;
+        const userEmail = user.email;
+        const newData = {userEmail, image, tourists_spot_name, country_Name, location, average_cost, seasonality, travel_time, totaVisitorsPerYear, userEmail, userName, short_description};
 
         console.log(newData);
 
 
-        fetch('http://localhost:5000/addspot',{
+        fetch('https://tourism-tourisspots.vercel.app/addTouristSpot',{
             method: 'POST',
             headers:
                 {
@@ -68,7 +69,7 @@ const AddSpot = () => {
 
 
     return (
-    <div className='bg-black'>
+    <div className='bg[#000000ad]'>
 <div className='max-w-[1280px] mx-auto content-center min-h-scree' >
 <form onSubmit={handleAdd} className='lg:w-4/5 mx-auto bg-black shadow-sm shadow-gray-700 px-6  py-10 mb-10' action="">
 
@@ -84,8 +85,8 @@ const AddSpot = () => {
 <input className='w-full outline-none py-2 px-2 border-b border-gray-600 bg-black text-[#FFC700]'   type="text" name="seasonality" placeholder='Seasonality' id="" />
 <input className='w-full outline-none py-2 px-2 border-b border-gray-600 bg-black text-[#FFC700]'   type="text" name="time" placeholder='Trabel Time' id="" />
 <input className='w-full outline-none py-2 px-2 border-b border-gray-600 bg-black text-[#FFC700]'   type="text" name="perYear" placeholder='Total Visitors Per Year' id="" />
-<input className='w-full outline-none py-2 px-2 border-b border-gray-600 bg-black text-[#FFC700]'   type="email" name="email" placeholder='Email' id="" />
-<input className='w-full outline-none py-2 px-2 border-b border-gray-600 bg-black text-[#FFC700]'   type="text" name="userName" placeholder='User Name' id="" />
+{/* <input className='w-full outline-none py-2 px-2 border-b border-gray-600 bg-black text-[#FFC700]'   type="email" name="email" placeholder='Email' id="" /> */}
+{/* <input className='w-full outline-none py-2 px-2 border-b border-gray-600 bg-black text-[#FFC700]'   type="text" name="userName" placeholder='User Name' id="" /> */}
 <input className='w-full outline-none py-2 px-2 border-b border-gray-600 bg-black text-[#FFC700] col-span-2'  type="text" name="descreption" placeholder='Short Description' id="" />
 <input className='w-full py-1 rounded px-2 cursor-pointer bg-orange-400 text-white font-bold col-span-2 mt-8'  type="submit" name="submit" value="Add Spot" placeholder='' id="" />
 </div>

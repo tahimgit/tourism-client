@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDG37XtjxNnEpYYjc7FWL8AGMHF2GPMtUw",
-  authDomain: "tour-of-south-asia.firebaseapp.com",
-  projectId: "tour-of-south-asia",
-  storageBucket: "tour-of-south-asia.appspot.com",
-  messagingSenderId: "191293606422",
-  appId: "1:191293606422:web:bcd773325ef33b87890337"
+  apiKey: "AIzaSyBkHuKYZW5nYfBQvBiz_bpHjY9GzG4eIk4",
+  authDomain: "real-estate-b586e.firebaseapp.com",
+  projectId: "real-estate-b586e",
+  storageBucket: "real-estate-b586e.appspot.com",
+  messagingSenderId: "1089173232040",
+  appId: "1:1089173232040:web:6d34f6fed605eeb4e8259d"
 };
 
 // Initialize Firebase

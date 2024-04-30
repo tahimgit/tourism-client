@@ -1,9 +1,6 @@
 import React from 'react';
 import { useTypewriter } from 'react-simple-typewriter'
 
-
-
-
 const Category = () => {
     const text = useTypewriter({
         words: ['Hello', 'From', 'Typewriter', 'Hook!'],

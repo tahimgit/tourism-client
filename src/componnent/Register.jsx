@@ -15,7 +15,7 @@ const Register = () => {
   const [errorUser, setErrorUser] = useState("");
   const [chacked, setChacked] = useState("");
 
-const {createUser, user} = useContext(AuthContext)
+const {createUser,udpateUser, user} = useContext(AuthContext)
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -29,7 +29,17 @@ const {createUser, user} = useContext(AuthContext)
     const Accept = e.target.terms.checked;
     console.log(name, email, photo, password);
 
-  
+    const updateDisplayName= (registerdUser, name) => {
+      registerdUser.updateProfile({
+        displayName: name
+      }).then(function() {
+        // Update successful.
+        console.log("Display name updated successfully");
+      }).catch(function(error) {
+        // An error occurred.
+        console.error("Error updating display name:", error);
+      });
+    }
     if (password.length < 6) {
       setErrorUser("password must be 6 caracter");
       return;
@@ -47,9 +57,11 @@ const {createUser, user} = useContext(AuthContext)
     setChacked("");
 
     createUser(email, password, photo, name)
-    .then((result)=>{
-      console.log(result.user);
-
+    .then( async(result)=>{
+      // console.log(result.user);
+      const res = await udpateUser(name,photo,email)
+      // console.log(user)
+      // console.log(res)
       const Toast = Swal.mixin({
         toast: true,
         position: "top-end",
