@@ -4,19 +4,19 @@ const touristFeedbackData = [
       avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       name: 'John Doe',
       location: 'New York, USA',
-      comment: 'Absolutely stunning experience! The scenery was breathtaking and the tour guide was extremely knowledgeable.',
+      comment: 'Absolutely unique experience! The scenery was breathtaking and the tour guide was extremely knowledgeable.',
     },
     {
       avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=1522&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       name: 'Jane Smith',
       location: 'London, UK',
-      comment: 'Had a fantastic time exploring the city with this tour company. Highly recommended for anyone visiting!',
+      comment: 'Had a fantastic time for exploring the city with this tour company. Personally i Highly recommended it for anyone visiting!',
     },
     {
       avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       name: 'Michael Johnson',
       location: 'Sydney, Australia',
-      comment: 'The best tour I have ever been on! The guides were friendly and the itinerary was well-planned. Will definitely book again!',
+      comment: 'The best tour I have ever been on! The guides were friendly and the itinerary was well-planned. Will definitely book it again!',
     },
     {
         avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
@@ -59,4 +59,4 @@ const TourisFeedback = () => {
     );
 };
 
-export default TourisFeedback;<h1 className='text-4xl'>Touris Feedback</h1>
+export default TouristFeedback;<h1 className='text-4xl'>Tourist Feedback</h1>
