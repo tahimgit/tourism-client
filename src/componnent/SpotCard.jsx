@@ -9,8 +9,6 @@ const SpotCard = ({spotData}) => {
     const {_id, userEmail, image, tourists_spot_name, country_Name, location, cost, seasonality, travel_time} = spotData;
 
 
-
-
     return (
         <div className=''>
          <div className=' bg[#000000ad] shadow-2xl mt-5 '>
